@@ -19,7 +19,7 @@ export default function Edit() {
     async function fetchData() {
       const id = params.id.toString();
       const response = await fetch(
-        `mongodb+srv://codyhearell:dyOqv3eShCDh6Vvx@apiproject.r3ltm2o.mongodb.net/Students/{params.id.toString()}`
+        `http://localhost:3001/Students/${params.id.toString()}`
       );
 
       if (!response.ok) {

@@ -36,7 +36,7 @@ export default function RecordList() {
     async function getRecords() {
       try {
         const response = await fetch(
-          `mongodb+srv://codyhearell:dyOqv3eShCDh6Vvx@apiproject.r3ltm2o.mongodb.net/Students`
+          `http://localhost:3001/Students`
         );
         if (!response.ok) {
           throw new Error(`An error occurred: ${response.statusText}`);
@@ -56,7 +56,7 @@ export default function RecordList() {
   async function deleteRecord(id) {
     try {
       await fetch(
-        `mongodb+srv://codyhearell:dyOqv3eShCDh6Vvx@apiproject.r3ltm2o.mongodb.net/Students/${id}`,
+        `http://localhost:3001/Students/${id}`,
         {
           method: "DELETE",
         }

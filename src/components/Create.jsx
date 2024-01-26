@@ -25,7 +25,7 @@ export default function Create() {
     // When a post request is sent to the create url, we'll add a new record to the database.
     const newPerson = { ...form };
 
-    await fetch("mongodb+srv://codyhearell:dyOqv3eShCDh6Vvx@apiproject.r3ltm2o.mongodb.net/Students", {
+    await fetch("http://localhost:3001/Students", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
